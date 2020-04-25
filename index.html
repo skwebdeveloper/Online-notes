@@ -86,7 +86,7 @@
         </div> 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-default green" data-dismiss="modal">Sign up</button>
+          <button type="submit" class="btn btn-default green" data-dismiss="modal">Sign up</button>
           <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button> 
         </div> 
       </div>
@@ -96,10 +96,12 @@
 
 
 <script>
-(function($){
-$("#signupform").submit(function(){
-        console.log("Return")
-        // Php default remove "action"
+
+  
+//   1. It doesn't console anything 
+  
+$("#signupform").submit(function(event){
+        // Php default remove "action
         event.preventDefault();
         // // Collect user input
         var postdatafill = $(this).serializeArray();
@@ -109,7 +111,6 @@ $("#signupform").submit(function(){
         // $.ajax({});
         
         });
-      });
 
 
   </script>
@@ -137,9 +138,7 @@ $("#signupform").submit(function(){
         <div class="modal-body">
 <!-- This is for error -->
 <div class="error">
-
 </div>
-
 <div class="form-group">
            <label for="email" class="sr-only">Email:</label>
          <input type="email" id="email" class="form-control" placeholder="Email" name="email" maxlenght="30">  
@@ -165,6 +164,13 @@ $("#signupform").submit(function(){
     </div>
   </div>
 </form>
+
+
+
+
+
+
+
 
 
 <!-- This is for forget password -->
@@ -219,7 +225,7 @@ $("#signupform").submit(function(){
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
     <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>   
@@ -228,5 +234,3 @@ $("#signupform").submit(function(){
   
   </body>
 </html>
-
-
